@@ -30,7 +30,7 @@ class App extends Component {
 
   handleScoreChange = (index, delta) => {
     this.setState( prevState => ({
-      score: prevState.players[index].score += delta + 1
+      score: prevState.players[index].score += delta
     }));
   }
 
@@ -47,7 +47,7 @@ class App extends Component {
       <div className="scoreboard">
         <Header 
           title="Scoreboard" 
-          totalPlayers={this.state.players.length} 
+          players={this.state.players}
         />
   
         {/* Players list */}
